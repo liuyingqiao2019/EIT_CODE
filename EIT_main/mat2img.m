@@ -1,0 +1,12 @@
+dirpath='C:\Users\Administrator\Desktop\EIT_CODE\EIT_main';
+dirpath1='C:\Users\Administrator\Desktop\EIT_CODE\EIT_main';
+type='mat';
+type1='jpg';
+oldvar = '';
+    infile = fullfile(dirpath, sprintf('EIT_real_lung_images.mat', j));
+    outfile = fullfile(dirpath1, sprintf('EIT_real_lung_images.jpg', j));
+    datastruct = load(infile);
+    fn = fieldnames(datastruct);
+    firstvar = fn{1};
+    data = datastruct.(firstvar);
+    imwrite( data, outfile );

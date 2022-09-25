@@ -1,0 +1,25 @@
+# net缓冲区定义
+net: "./ESPCN_net.prototxt"
+# 测试网络前向推理的迭代次数，test_iter与test_batch_size的乘积应为整个测试集的大小
+test_iter: 50
+# 每隔test_interval次训练迭代进行一次测试
+test_interval: 100
+# 网络的初始学习速率
+base_lr: 0.005
+# 用到动量来进行权重优化的优化器动量
+momentum: 0.9
+# 权重衰减参数，用于防止模型过拟合
+weight_decay: 0
+# 学习率调整策略（保持不变）
+lr_policy: "fixed" 
+# 训练迭代多少次后显示相关信息到终端
+display: 100
+# 训练迭代最大次数
+max_iter: 1000
+# 保存模型的间隔，即每隔多少次训练迭代保存一次模型快照
+snapshot: 200
+# 模型保存的路径及路径名
+snapshot_prefix: "./snapshot/espcn"
+# 使用 CPU 或 GPU模式
+solver_mode: CPU
+
